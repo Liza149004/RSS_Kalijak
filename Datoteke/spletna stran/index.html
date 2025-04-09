@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Kmetija Kalijak</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+              background-color: #FFFFFF;
+            }
+            .bg-primary-green {
+              background-color: #72AC45;
+            }
+            .text-brown {
+              color: #52463D;
+            }
+            .bg-brown {
+              background-color: #52463D;
+            }
+            body {
+              background-color: #FFFFFF;
+              padding-top: 70px;
+            }
+        </style>           
+    </head>
+        <body>
+            <nav class="navbar bg-dark fixed-top">
+                <div class="container-fluid">
+                  <!-- Leva stran brez logotipa -->
+                  <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  
+                  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                      <h5 class="offcanvas-title" id="offcanvasNavbarLabel">KALIJAK</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                          <a class="nav-link" href="O nas.html">O Nas</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="Zgodovina.html">Zgodovina</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Setveni_koledar.html">Setveni koledar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Sadike.html">Sadike</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Zelenjava.html">Zelenjava</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="Trgovina.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Trgovina
+                          </a>
+                          <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Trgovina_sadike.html">Sadike</a></li>
+                            <li><a class="dropdown-item" href="Trgovina_zelenjava.html">Zelenjava</a></li>
+                          </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Kosarica.html">Košarica</a>
+                          </li>
+                      </ul>
+                    </div>
+                  </div>
+
+              
+                  <!-- Desna stran z iskalnim gumbom in gumbom za košarico -->
+                  <div class="d-flex">
+                    <!-- Iskanje -->
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                      <button class="btn btn-outline-success" type="submit"><img src="fotografije/logotip/search belo.png" width="20px"></button>
+                    </form>
+              
+                    <!-- Gumb za košarico -->
+                    <button class="btn btn-outline-primary ms-2" type="button">
+                      <i class="bi bi-cart"></i> <a href="Kosarica.html"><img src="fotografije/logotip/basket belo.png" width="20px"></a>
+                    </button>
+                  </div>
+                </div>
+              </nav>              
+
+              <header class="hero-section d-flex align-items-center">
+                <div class="container hero-overlay d-flex align-items-center">
+                  <div class="text-center w-100">
+                    <img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" width="200px">
+                    <h1 class="display-4">"NARAVA V VSAKEM ZRNU"</h1>
+                    <p class="lead">since 1932</p>
+                  </div>
+                </div>
+              </header>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+        </body>
+</html>
