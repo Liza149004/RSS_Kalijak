@@ -1,257 +1,261 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Trgovina</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <style>
-        body {
-            background-color: #FFFFFF;
-            padding-top: 70px;
-            font-family: 'Antonio', sans-serif;
-        }
-        .header {
-            background-color: #8fbc8f; /* Green header */
-            color: white;
-            padding: 15px 20px;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        .header h1 {
-            font-size: 2.2em;
-            margin-bottom: 0;
-        }
-        .shop-title {
-            font-size: 1.8em;
-            margin-bottom: 10px;
-            color: #393325;
-            text-align: center;
-        }
-        .toggle-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
-            background-color: #e0eee0;
-            padding: 3px;
-            border-radius: 25px;
-        }
-        .toggle-container {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 15px;
-            background-color: #72AC45; 
-            padding: 3px; 
-            border-radius: 25px; 
-        }
-        .toggle-button {
-            border: none;
-            padding: 8px 16px;
-            cursor: pointer;
-            font-weight: bold;
-            color: #d9f1c8; 
-            background-color: transparent;
-            border-radius: 25px;
-            font-size: 20px;
-        }
-        .toggle-button.active {
-            background-color: #d9f1c8; 
-            color: #72AC45;
-        }
-        .grid-container {
-            padding: 0 10px;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-left: -5px;
-            margin-right: -5px;
-        }
-        .col-md-6 {
-            width: 50%;
-            padding: 0 5px;
-            margin-bottom: 15px;
-        }
-        .item-container {
-            background-color: white;
-            border-radius: 8px;
-            padding: 10px;
-            text-align: center;
-            margin-bottom: 15px;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        .image-container {
-            background-color: #f5f5dc;
-            height: 120px;
-            margin-bottom: 8px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 0.75em;
-            border: 3px solid #72AC45; /* Bold green outline */
-            overflow: hidden;
-        }
-        .image-container img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: cover;
-        }
-        .item-title {
-            font-weight: bold;
-            margin-top: 10px;
-            margin-bottom: 5px;
-            font-size: 1em;
-            color: #393325;
-        }
-        .separator {
-            border-top: 1px solid #ccc;
-            margin: 5px 0;
-        }
-        .item-price {
-            color: #393325;
-            font-size: 0.9em;
-            margin-bottom: 8px;
-        }
-        .kosarica-button {
-            display: inline-block;
-            padding: 6px 12px;
-            background-color: #72AC45;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 0.8em;
-        }
-    </style>
-</head>
-<body>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Trgovina</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            body {
+                background-color: #FFFFFF;
+                padding-top: 70px;
+                font-family: 'Antonio', sans-serif;
+            }
+            .header {
+                background-color: #8fbc8f;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .header h1 {
+                font-size: 2.2em;
+                margin-bottom: 0;
+            }
+            .shop-title {
+                font-size: 1.8em;
+                margin-bottom: 10px;
+                color: #393325;
+                text-align: center;
+            }
+            .toggle-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                background-color: #e0eee0;
+                padding: 3px;
+                border-radius: 25px;
+            }
+            .toggle-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                background-color: #72AC45; 
+                padding: 3px; 
+                border-radius: 25px; 
+            }
+            .toggle-button {
+                border: none;
+                padding: 8px 16px;
+                cursor: pointer;
+                font-weight: bold;
+                color: #d9f1c8; 
+                background-color: transparent;
+                border-radius: 25px;
+                font-size: 20px;
+            }
+            .toggle-button.active {
+                background-color: #d9f1c8; 
+                color: #72AC45;
+            }
+            .grid-container {
+                padding: 0 10px;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+            .col-md-6 {
+                width: 50%;
+                padding: 0 5px;
+                margin-bottom: 15px;
+            }
+            .item-container {
+                background-color: white;
+                border-radius: 8px;
+                padding: 10px;
+                text-align: center;
+                margin-bottom: 15px;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+            }
+            .image-container {
+                background-color: #f5f5dc;
+                height: 120px;
+                margin-bottom: 8px;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.75em;
+                border: 3px solid #72AC45;
+                overflow: hidden;
+            }
+            .image-container img {
+                max-width: 100%;
+                max-height: 100%;
+                object-fit: cover;
+            }
+            .item-title {
+                font-weight: bold;
+                margin-top: 10px;
+                margin-bottom: 5px;
+                font-size: 1em;
+                color: #393325;
+            }
+            .separator {
+                border-top: 1px solid #ccc;
+                margin: 5px 0;
+            }
+            .item-price {
+                color: #393325;
+                font-size: 0.9em;
+                margin-bottom: 8px;
+            }
+            .kosarica-button {
+                display: inline-block;
+                padding: 6px 12px;
+                background-color: #72AC45;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 0.8em;
+            }
+        </style>
+    </head>
 
-    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="searchModalLabel">Iskanje</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zapri"></button>
-                </div>
-                <div class="modal-body">
-                    <form id="searchForm">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Išči..." id="searchInput">
-                            <button class="btn btn-success" type="submit">
-                                <i class="bi bi-search"></i>
-                            </button>
+        <body>
+
+            <!--Iskanje - Search bar-->
+            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success text-white">
+                            <h5 class="modal-title" id="searchModalLabel">Iskanje</h5>
+                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zapri"></button>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-        <nav class="navbar navbar-dark bg-dark fixed-top" role="navigation">
-          <div class="container-fluid d-flex justify-content-between">
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div>
-              <button class="btn btn-link me-3 p-0" data-bs-toggle="modal" data-bs-target="#searchModal">
-                <img src="fotografije/logotip/search belo.png" width="25px" alt="Iskanje">
-              </button>
-              <a href="kosarica.html"><img src="fotografije/logotip/basket belo.png" width="25px" alt="Košarica"></a>
-            </div>
-          </div>
-        </nav>
-
-        <aside class="offcanvas offcanvas-start" tabindex="-1" id="menu" aria-labelledby="menuLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="menuLabel"><img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" padding-top="10px" width="50px"></h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zapri"></button>
-          </div>
-          <div class="offcanvas-body">
-            <nav>
-              <ul class="navbar-nav">
-                <li><a class="nav-link" href="index.html">Domov</a></li>
-                <li><a class="nav-link" href="o_nas.html">O nas</a></li>
-                <li><a class="nav-link" href="setveni_koledar.html">Setveni koledar</a></li>
-                <li><a class="nav-link" href="zgodovina.html">Zgodovina</a></li>
-                <li><a class="nav-link" href="sadike.html">Sadike</a></li>
-                <li><a class="nav-link" href="zelenjava.html">Zelenjava</a></li>
-                <li><a class="nav-link" href="trgovina_zelenjava.html">Trgovina</a></li>
-              </ul>
-            </nav>
-          </div>
-        </aside>
-
-        <header>
-            <div style="text-align: center;">
-                <img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" alt="Kalijak logotip" width="150px">
-            </div>
-
-        </header>
-
-        <main>
-        <h2 class="shop-title">TRGOVINA</h2>
-        <div class="toggle-container">
-            <button class="toggle-button" onclick="window.location.href='trgovina_sadike.html'">Sadike</button>
-            <button class="toggle-button active" onclick="window.location.href='trgovina_zelenjava.html'">Zelenjava</button>
-        </div>
-
-        <div class="grid-container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="item-container">
-                        <div class="image-container">
-                            <img src="fotografije/Ponudba/Zelenjava/cesnjev.jpg" alt="Češnjev paradižnik">
+                        <div class="modal-body">
+                            <form id="searchForm">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Išči..." id="searchInput">
+                                    <button class="btn btn-success" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </div>
+                            </form>
                         </div>
-                        <h3 class="item-title">Češnjev paradižnik</h3>
-                        <p class="item-price">3,50 €/kg</p>
-                        <button class="kosarica-button">V KOŠARICO</button>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="item-container">
-                        <div class="image-container">
-                            <img src="fotografije/Ponudba/Zelenjava/volovsko.jpg" alt="Volovsko srce">
-                        </div>
-                        <h3 class="item-title">Volovsko srce</h3>
-                        <p class="item-price">3,50 €/kg</p>
-                        <button class="kosarica-button">V KOŠARICO</button>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="item-container">
-                        <div class="image-container">
-                            <img src="fotografije/Ponudba/Zelenjava/Yellow-tomatoes-.png" alt="Rumen paradižnik">
+
+            <!-- Navigacija -->
+                <nav class="navbar navbar-dark bg-dark fixed-top" role="navigation">
+                    <div class="container-fluid d-flex justify-content-between">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div>
+                        <button class="btn btn-link me-3 p-0" data-bs-toggle="modal" data-bs-target="#searchModal">
+                            <img src="fotografije/logotip/search belo.png" width="25px" alt="Iskanje">
+                        </button>
+                        <a href="kosarica.html"><img src="fotografije/logotip/basket belo.png" width="25px" alt="Košarica"></a>
                         </div>
-                        <h3 class="item-title">Rumen paradižnik</h3>
-                        <p class="item-price">3,00 €/kg</p>
-                        <button class="kosarica-button">V KOŠARICO</button>
                     </div>
+                </nav>
+
+                <aside class="offcanvas offcanvas-start" tabindex="-1" id="menu" aria-labelledby="menuLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="menuLabel"><img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" padding-top="10px" width="50px"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zapri"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <nav>
+                        <ul class="navbar-nav">
+                            <li><a class="nav-link" href="index.html">Domov</a></li>
+                            <li><a class="nav-link" href="o_nas.html">O nas</a></li>
+                            <li><a class="nav-link" href="setveni_koledar.html">Setveni koledar</a></li>
+                            <li><a class="nav-link" href="zgodovina.html">Zgodovina</a></li>
+                            <li><a class="nav-link" href="sadike.html">Sadike</a></li>
+                            <li><a class="nav-link" href="zelenjava.html">Zelenjava</a></li>
+                            <li><a class="nav-link" href="trgovina_zelenjava.html">Trgovina</a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                </aside>
+
+                <header>
+                    <div style="text-align: center;">
+                        <img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" alt="Kalijak logotip" width="150px">
+                    </div>
+
+                </header>
+
+                <main>
+                <h2 class="shop-title">TRGOVINA</h2>
+                <div class="toggle-container">
+                    <button class="toggle-button" onclick="window.location.href='trgovina_sadike.html'">Sadike</button>
+                    <button class="toggle-button active" onclick="window.location.href='trgovina_zelenjava.html'">Zelenjava</button>
                 </div>
-                <div class="col-md-6">
-                    <div class="item-container">
-                        <div class="image-container">
-                            <img src="fotografije/Ponudba/Zelenjava/sweetpeper.jpg" alt="Sladka paprika">
+
+                <div class="grid-container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="item-container">
+                                <div class="image-container">
+                                    <img src="fotografije/Ponudba/Zelenjava/cesnjev.jpg" alt="Češnjev paradižnik">
+                                </div>
+                                <h3 class="item-title">Češnjev paradižnik</h3>
+                                <p class="item-price">3,50 €/kg</p>
+                                <button class="kosarica-button">V KOŠARICO</button>
+                            </div>
                         </div>
-                        <h3 class="item-title">Sladka paprika</h3>
-                        <p class="item-price">2,80 €/kg</p>
-                        <button class="kosarica-button">V KOŠARICO</button>
+                        <div class="col-md-6">
+                            <div class="item-container">
+                                <div class="image-container">
+                                    <img src="fotografije/Ponudba/Zelenjava/volovsko.jpg" alt="Volovsko srce">
+                                </div>
+                                <h3 class="item-title">Volovsko srce</h3>
+                                <p class="item-price">3,50 €/kg</p>
+                                <button class="kosarica-button">V KOŠARICO</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="item-container">
+                                <div class="image-container">
+                                    <img src="fotografije/Ponudba/Zelenjava/Yellow-tomatoes-.png" alt="Rumen paradižnik">
+                                </div>
+                                <h3 class="item-title">Rumen paradižnik</h3>
+                                <p class="item-price">3,00 €/kg</p>
+                                <button class="kosarica-button">V KOŠARICO</button>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="item-container">
+                                <div class="image-container">
+                                    <img src="fotografije/Ponudba/Zelenjava/sweetpeper.jpg" alt="Sladka paprika">
+                                </div>
+                                <h3 class="item-title">Sladka paprika</h3>
+                                <p class="item-price">2,80 €/kg</p>
+                                <button class="kosarica-button">V KOŠARICO</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</main>
-<footer  class="bg-dark text-white text-center py-3 fixed-bottom">
+        </main>
 
-    <i class="bi bi-info-circle-fill info-icon" role="link" aria-label="Informacije"><link href="o_nas.html"></i>
-    <p>© 2025 Kalijak. Vse pravice pridržane.</p>
- </footer>
+        <!-- Noga -->
+        <footer  class="bg-dark text-white text-center py-3 fixed-bottom">
+            <i class="bi bi-info-circle-fill info-icon" role="link" aria-label="Informacije"><link href="o_nas.html"></i>
+            <p>© 2025 Kalijak. Vse pravice pridržane.</p>
+        </footer>
 
- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+        </body>
 </html>
