@@ -17,7 +17,6 @@
         width: 200px;
         height: 200px;
         margin: 0 auto;
-        display: flex;
         align-items: center;
         justify-content: center;
         margin-top: -100px;
@@ -52,11 +51,6 @@
         border: none;
         border-radius: 25px;
       }
-      .rounded-img {
-        border-radius: 50%;
-        width: 100%;
-        max-width: 200px;
-      }
       .info-section {
         background-color: #72AC45;
         border-radius: 0 0 20px 20px;
@@ -76,10 +70,12 @@
         font-family: 'Antonio', sans-serif;
       }
       .circle-img {
-        width: 100%;
+        width: 100%; /*če damo tu več da gre kou preko roba se zgoci da izgineta search in košarica gmb v navbar*/
+        height: 100%;
+        object-fit: cover;
+        overflow: hidden;
         aspect-ratio: 1 / 1;
         border-radius: 50%;
-        object-fit: cover;
       }
       .bottom-arch {
         width: 100%;
@@ -98,7 +94,6 @@
         color: white;
         padding: 1rem;
         height: 100%;
-        display: flex;
         flex-direction: column;
         justify-content: center;
         border-radius: 1rem;
@@ -109,10 +104,10 @@
     <body>
 
       <!--Iskanje - Search bar-->
-      <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+      <div class="conteiner modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <div class="modal-header bg-success text-white">
+          <div class="modal-header bg-dark text-white">
             <h5 class="modal-title" id="searchModalLabel">Iskanje</h5>
             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zapri"></button>
           </div>
@@ -120,7 +115,7 @@
             <form id="searchForm">
               <div class="input-group">
                 <input type="text" class="form-control" placeholder="Išči..." id="searchInput">
-                <button class="btn btn-success" type="submit">
+                <button class="btn btn-dark" type="submit">
                   <i class="bi bi-search"></i>
                 </button>
               </div>
@@ -167,12 +162,11 @@
       </aside>
 
       <!-- Glava strani -->
-      <header>
+      <header class="conteiner my-2">
         <div style="text-align: center;">
           <img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" alt="Kalijak logotip" width="200px">
         </div>
           
-
         <div class="text-center mt-3">
           <h3 class="slogan">“NARAVA V VSAKEM ZRNU”</h3>
           <p class="text-muted">since 1932</p>
@@ -186,22 +180,22 @@
           <div class="row g-2">
             
             <!-- text zgoraj levo -->
-            <div class="col-6">
+            <div class="col-6 no-padding">
               <div class="content-box">
                 <h6 class="fw-bold">LASTNA PRIDELAVA SEZONSKE ZELENJAVE</h6>
                 <p class="mb-2 small">Na naši kmetiji pridelujemo svežo, ekološko sezonsko zelenjavo, ki raste z ljubeznijo in skrbjo za naravo. Vsak pridelek dozori na soncu in brez nepotrebnih kemikalij, da lahko uživate v pristnih okusih domače hrane.</p>
-                <a href="trgovina.html" class="btn btn-light btn-sm fw-bold">Preveri našo ponudbo<i class="bi bi-play"></i></a>
+                <a href="trgovina_zelenjava.html" class="btn btn-light btn-sm fw-bold">Preveri našo ponudbo<i class="bi bi-play"></i></a>
               </div>
             </div>
         
             <!-- Slika zgoraj desno -->
             <div class="col-6">
-              <img src="fotografije/Domača stran/zelenjava.jpg" alt="Veggies" class="circle-img shadow" />
+              <img src="fotografije/Domača stran/zelenjava.jpg" alt="Zelenjava" class="circle-img shadow" />
             </div>
         
             <!-- Slika spodaj levo -->
             <div class="col-6">
-              <img src="fotografije/Domača stran/zelenjava.jpg" alt="Greenhouse" class="circle-img shadow" />
+              <img src="fotografije/Domača stran/zelenjava.jpg" alt="Sadike" class="circle-img shadow" />
             </div>
         
             <!-- Text spodaj desno -->
@@ -209,7 +203,7 @@
               <div class="content-box">
                 <h6 class="fw-bold">GOJENJE SADIK SADJA, ZELENJAVE IN ZELIŠČ</h6>
                 <p class="mb-2 small">V naših rastlinjakih vzgajamo kakovostne sadike zelenjave, sadnega drevja in zelišč, ki so pripravljene, da uspevajo tudi na vašem vrtu. Na voljo so gomoljnice, stročnice, razhudniki, jagodičevje in še mnogo več – za bogat in zdrav pridelek doma!</p>
-                <a href="trgovina.html" class="btn btn-light btn-sm fw-bold">Preveri našo ponudba<i class="bi bi-play"></i></a>
+                <a href="trgovina_sadike.html" class="btn btn-light btn-sm fw-bold">Preveri našo ponudba<i class="bi bi-play"></i></a>
               </div>
             </div>
         
@@ -219,7 +213,7 @@
       </main>
 
       <!-- Noga -->
-      <footer  class="bg-dark text-white text-center py-3 fixed-bottom">   
+      <footer  class="conteiner-fluid bg-dark text-white text-center py-3 bottom">   
         <i class="bi bi-info-circle-fill info-icon" role="link" aria-label="Informacije"><link href="o_nas.html"></i>
         <p>© 2025 Kalijak. Vse pravice pridržane.</p>
       </footer>

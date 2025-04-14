@@ -120,6 +120,9 @@
                 border-radius: 5px;
                 font-size: 0.8em;
             }
+            .modal-header{
+                background-color: #72AC45;
+            }
         </style>
     </head>
 
@@ -129,7 +132,7 @@
             <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header bg-success text-white">
+                        <div class="modal-header bg-dark text-white">
                             <h5 class="modal-title" id="searchModalLabel">Iskanje</h5>
                             <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zapri"></button>
                         </div>
@@ -137,7 +140,7 @@
                             <form id="searchForm">
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Išči..." id="searchInput">
-                                    <button class="btn btn-success" type="submit">
+                                    <button class="btn btn-dark" type="submit">
                                         <i class="bi bi-search"></i>
                                     </button>
                                 </div>
@@ -148,7 +151,7 @@
             </div>
 
                 <!-- Navigacija -->
-                <nav class="navbar navbar-dark bg-dark fixed-top" role="navigation">
+            <nav class="navbar navbar-dark bg-dark fixed-top" role="navigation">
                 <div class="container-fluid d-flex justify-content-between">
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu">
                     <span class="navbar-toggler-icon"></span>
@@ -160,9 +163,9 @@
                     <a href="kosarica.html"><img src="fotografije/logotip/basket belo.png" width="25px" alt="Košarica"></a>
                     </div>
                 </div>
-                </nav>
+             </nav>
 
-                <aside class="offcanvas offcanvas-start" tabindex="-1" id="menu" aria-labelledby="menuLabel">
+            <aside class="offcanvas offcanvas-start" tabindex="-1" id="menu" aria-labelledby="menuLabel">
                 <div class="offcanvas-header">
                     <h5 class="offcanvas-title" id="menuLabel"><img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" padding-top="10px" width="50px"></h5>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zapri"></button>
@@ -180,17 +183,17 @@
                     </ul>
                     </nav>
                 </div>
-                </aside>
+            </aside>
 
             <!-- Glava strani -->
-                <header>
+                <header class="conteiner">
                     <div style="text-align: center;">
                         <img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" alt="Kalijak logotip" width="150px">
                     </div>
                 </header>
 
             <!-- Telo - vsebina-->
-                <main>
+                <main class="container my-2">
                     <h2 class="ponudba-title text-center">NAŠA PONUDBA</h2>
                     <div class="toggle-container">
                         <button class="toggle-button" onclick="window.location.href='sadike.html'">Sadike</button>
@@ -255,7 +258,7 @@
             </main>
 
         <!-- Noga -->    
-        <footer  class="bg-dark text-white text-center py-3 fixed-bottom">
+        <footer  class="bg-dark text-white text-center py-3 bottom">
             <i class="bi bi-info-circle-fill info-icon" role="link" aria-label="Informacije"><link href="o_nas.html"></i>
             <p>© 2025 Kalijak. Vse pravice pridržane.</p>
         </footer>

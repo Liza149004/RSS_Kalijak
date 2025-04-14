@@ -37,16 +37,12 @@
                 text-align: center;
             }
             .form {
-                background-color: rgb(187, 187, 187);
+                background-color: rgb(224, 224, 224);
                 padding: 5px;
                 border-radius: 4%;
             }
             .kosarica-button{
                 background-color: #72AC45;
-            }
-            .link{
-                color: #FFFFFF;
-                text-decoration: none;
             }
         </style>
     </head>
@@ -119,7 +115,50 @@
 
              <!-- Telo - vsebina -->
             <main class="container my-2">
-                <button type="button" class="btn kosarica-button"><a class="link" href="podatki.html">Oddaj naročilo</a></button>
+                <div class="conteiner-fluid form">
+                    <form class="container-fluid" action="/action_page.php" class="was-validated">
+                        <h2 class="shop-title">KONTAKTNI PODATKI</h2>
+                        <hr>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" placeholder="Ime">
+                          <input type="text" class="form-control" placeholder="Priimek">
+                          <div class="valid-feedback">Valid.</div>
+                          <div class="invalid-feedback">Please fill out this field.</div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Naslov">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Poštna številka">
+                            <input type="text" class="form-control" placeholder="Kraj">
+                          </div>
+                        <hr>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Telefonska številka">
+                        </div>
+                        <hr>
+                    </form>
+                
+                    <form class="container-fluid">
+                        <h2 class="shop-title">NAČIN PLAČILA</h2>
+                        <hr>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" placeholder="Ime na kartici">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Številka kartice">
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Datum poteka">
+                            <input type="text" class="form-control" placeholder="CVV">
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn text-white kosarica-button">Potrdi in plačaj</button>
+                    </form>
+                </div>  
         </main>
 
     <!-- Noga -->
