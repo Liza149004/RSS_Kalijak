@@ -57,13 +57,6 @@
         padding: 20px;
         color: white;
       }
-      .info-icon {
-        background-color: white;
-        color: #72AC45;
-        border-radius: 50%;
-        padding: 10px;
-        font-size: 1.5rem;
-      }
       body {
         background-color: #FFFFFF;
         padding-top: 70px;
@@ -98,6 +91,18 @@
         justify-content: center;
         border-radius: 1rem;
       }
+      .footer.bg-image {
+        background-image: url('fotografije/logotip/trava.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+      .container-footer {
+        margin-top: 70px;
+      }
+      .navbar {
+        background-color: #72AC45;
+      }
     </style>
   </head>
 
@@ -126,7 +131,7 @@
     </div>
     
       <!-- Navigacija -->
-      <nav class="navbar navbar-dark bg-dark fixed-top" role="navigation">
+      <nav class="navbar navbar-dark fixed-top" role="navigation">
         <div class="container-fluid d-flex justify-content-between">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu">
             <span class="navbar-toggler-icon"></span>
@@ -213,9 +218,11 @@
       </main>
 
       <!-- Noga -->
-      <footer  class="conteiner-fluid bg-dark text-white text-center py-3 bottom">   
-        <i class="bi bi-info-circle-fill info-icon" role="link" aria-label="Informacije"><link href="o_nas.html"></i>
-        <p>© 2025 Kalijak. Vse pravice pridržane.</p>
+      <footer  class="footer bg-image text-white text-center py-3 bottom">
+        <div class="container-footer">
+            <i class="bi bi-info-circle-fill info-icon" role="link" aria-label="Informacije"><link href="o_nas.html"></i>
+            <p>© 2025 Kalijak. Vse pravice pridržane.</p>
+        </div>
       </footer>
 
       <!-- <script>
