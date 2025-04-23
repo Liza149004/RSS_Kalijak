@@ -61,11 +61,53 @@
                 background-color: #72AC45;
             }
             .ozadje-temno {
-                background-image: url('fotografije/ozadje temno-01-01.png');
+                background-image: url('fotografije/ozadje temno-01.png');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
             }
+            body {
+            font-family: sans-serif;
+        }
+        .calendar-container {
+            width: 300px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .calendar-header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .calendar-controls {
+            margin-bottom: 10px;
+        }
+        .calendar-controls button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        .calendar-day {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+        .planting-day::after {
+            content: " *";
+            color: green;
+        }
+        #planting-info {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
         </style>
     </head>
 
@@ -139,6 +181,100 @@
              <!-- Telo - vsebina -->
             <main class="container my-3">
                 
+                <div class="calendar-container">
+                    <div class="calendar-header">
+                        <div class="calendar-controls">
+                            <button id="prev-month">Prejšnji</button>
+                            <span id="current-month"></span>
+                            <button id="next-month">Naslednji</button>
+                        </div>
+                    </div>
+                    <div class="calendar-grid" id="calendar-days">
+                        </div>
+                </div>
+
+                <div id="planting-info" style="display: none;">
+                    <h3>Setveni nasveti za <span id="selected-date"></span></h3>
+                    <p id="planting-details"></p>
+                </div>
+
+                <script>
+                    // Tukaj bo prišla JavaScript koda za funkcionalnost koledarja
+                    const calendarDaysContainer = document.getElementById('calendar-days');
+                    const currentMonthSpan = document.getElementById('current-month');
+                    const prevMonthButton = document.getElementById('prev-month');
+                    const nextMonthButton = document.getElementById('next-month');
+                    const plantingInfoDiv = document.getElementById('planting-info');
+                    const selectedDateSpan = document.getElementById('selected-date');
+                    const plantingDetailsParagraph = document.getElementById('planting-details');
+
+                    let currentDate = new Date();
+
+                    function displayCalendar(year, month) {
+                        currentDate = new Date(year, month);
+                        const firstDayOfMonth = new Date(year, month, 1);
+                        const lastDayOfMonth = new Date(year, month + 1, 0);
+                        const daysInMonth = lastDayOfMonth.getDate();
+                        const dayOfWeekOfFirstDay = firstDayOfMonth.getDay(); // 0=nedelja, 1=ponedeljek, ...
+
+                        currentMonthSpan.textContent = new Intl.DateTimeFormat('sl-SI', { month: 'long', year: 'numeric' }).format(currentDate);
+                        calendarDaysContainer.innerHTML = '';
+
+                        // Dodaj prazne celice za dneve pred prvim dnem v mesecu
+                        for (let i = 0; i < dayOfWeekOfFirstDay; i++) {
+                            const emptyCell = document.createElement('div');
+                            calendarDaysContainer.appendChild(emptyCell);
+                        }
+
+                        for (let day = 1; day <= daysInMonth; day++) {
+                            const dayCell = document.createElement('div');
+                            dayCell.classList.add('calendar-day');
+                            dayCell.textContent = day;
+
+                            const fullDate = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+                            const plantingSchedule = {
+                                '2025-03-30': 'Redkvica (na prosto)',
+                                '2025-04-15': 'Solata (na prosto)',
+                                '2025-05-25': 'Paradižnik (na prosto)',
+                                '2025-03-15': 'Paradižnik (v zaprtih prostorih)'
+                                // Dodaj še druge datume in kaj se sadi
+                            };
+
+                            if (plantingSchedule[fullDate]) {
+                                dayCell.classList.add('planting-day');
+                                dayCell.addEventListener('click', () => {
+                                    selectedDateSpan.textContent = new Intl.DateTimeFormat('sl-SI', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(fullDate));
+                                    plantingDetailsParagraph.textContent = plantingSchedule[fullDate];
+                                    plantingInfoDiv.style.display = 'block';
+                                });
+                            } else {
+                                dayCell.addEventListener('click', () => {
+                                    selectedDateSpan.textContent = new Intl.DateTimeFormat('sl-SI', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(fullDate));
+                                    plantingDetailsParagraph.textContent = 'Na ta dan ni predvidene setve.';
+                                    plantingInfoDiv.style.display = 'block';
+                                });
+                            }
+
+                            calendarDaysContainer.appendChild(dayCell);
+                        }
+                    }
+
+                    function nextMonth() {
+                        currentDate.setMonth(currentDate.getMonth() + 1);
+                        displayCalendar(currentDate.getFullYear(), currentDate.getMonth());
+                    }
+
+                    function prevMonth() {
+                        currentDate.setMonth(currentDate.getMonth() - 1);
+                        displayCalendar(currentDate.getFullYear(), currentDate.getMonth());
+                    }
+
+                    prevMonthButton.addEventListener('click', prevMonth);
+                    nextMonthButton.addEventListener('click', nextMonth);
+
+                    // Prikaži začetni mesec
+                    displayCalendar(currentDate.getFullYear(), currentDate.getMonth());
+                </script>
             </main>
 
         <!-- Noga -->

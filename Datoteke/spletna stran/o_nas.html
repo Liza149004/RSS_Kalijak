@@ -66,17 +66,146 @@
                 background-position: center;
                 background-repeat: no-repeat;
             }
-            .container-map {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-           
-           
-           } 
+            main {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            }
 
+            .container main{
+                max-width: 600px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #fff;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+
+            h2 {
+                color: #333;
+                margin-bottom: 20px;
+            }
+
+            .map-container {
+                width: 100%;
+                border: 4px solid #aed581; /* Zelen okvir */
+                border-radius: 8px;
+                overflow: hidden;
+                margin-bottom: 10px; /* Zmanjšan spodnji rob za prostor do naslova */
+                height: 200px; /* Omejena višina na približno tretjino prejšnje (lahko prilagodite) */
+            }
+
+            iframe {
+                display: block;
+                width: 100%;
+                height: 100%; /* Zemljevid zavzame celotno višino starša */
+                border: 0;
+            }
+
+            .address {
+                background-color: #d7f1db;
+                color:#72AC45;
+                padding: 10px;
+                border-radius: 15px; /* Večji radij robov */
+                margin-top: 5px; /* Zmanjšan zgornji rob za prostor od zemljevida */
+                margin-bottom: 20px; /* Dodan spodnji rob za prostor do "O nas" */
+            }
+
+            .about-us {
+                background-color: #72AC45;
+                color: #ffffff;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 20px;
+                text-align: left;
+            }
+
+            .about-us h3 {
+                font-size: 1.8em;
+                font-weight: bold;
+                color: #ffffff;
+                text-align: center;
+                margin-top: 0;
+                margin-bottom: 15px;
+            }
+
+
+
+            .certificates {
+                margin-top: 30px;
+                padding: 20px;
+                background-color: #f9f9f9;
+                border-radius: 10px;
+                text-align: center;
+            }
+
+            .certificates h3 {
+                color: #72AC45;
+                margin-bottom: 20px;
+            }
+
+            .certificate-list {
+                list-style: none;
+                padding: 0;
+            }
+
+            .certificate-item {
+                display: flex;
+                align-items: center; /* Navpična poravnava slike in besedila */
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px solid #eee;
+            }
+
+            .certificate-item:last-child {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            .certificate-logo {
+                width: 60px; /* Zmanjšana širina slike */
+                height: 60px; /* Zmanjšana višina slike */
+                margin-right: 15px;
+                border: 1px solid #ddd;
+                border-radius: 5px;
+                object-fit: contain;
+            }
+
+            .certificate-info {
+                text-align: left;
+            }
+
+            .certificate-info h4 {
+                color: #72AC45;
+                margin-top: 0;
+                margin-bottom: 5px;
+                font-size: 1.1em;
+            }
+
+            .certificate-info p {
+                color: #393325;
+                font-size: 0.9em;
+                margin-bottom: 0;
+            }
+
+            /* Za manjše zaslone postavimo sliko nad besedilo */
+            @media (max-width: 600px) {
+                .certificate-item {
+                    flex-direction: column;
+                    text-align: center;
+                }
+
+                .certificate-logo {
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                .certificate-info {
+                    text-align: center;
+                }
+            }
         </style>
     </head>
 
@@ -149,11 +278,56 @@
 
              <!-- Telo - vsebina -->
             <main class="container my-3">
-                <div class="container-map">
-                    <h3>KJE NAS NAJDETE</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2775.7432662516867!2d15.000383776796198!3d45.916442571085035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47651b673daeba75%3A0x53c6f99acb247e0!2sPekel%203%2C%208210%20Trebnje!5e0!3m2!1ssl!2ssi!4v1745427674778!5m2!1ssl!2ssi" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                <div class="container">
+                    <h2 class="shop-title">KJE NAS NAJDETE</h2>
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.842988819879!2d15.0042946!3d45.9159134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764db0c76a808a3%3A0x36a5a934b61c43c9!2sPekel%203%2C%203210%20Trebnje!5e0!3m2!1ssl!2ssi!4v1682278347983!5m2!1ssl!2ssi"
+                                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    <div class="address">📍 Pekel 3, 3210 Trebnje</div>
+            
+                    <div class="about-us">
+                        <h3>O NAS</h3>
+                        <p>Smo ena redkih slovenskih ekoloških kmetij, ki se ukvarja z gojenjem lastnih sadik zelenjave, sadja in zelišč, ter lastno pridelavo zelenjave.</p>
+                    </div>
                 </div>
+            
+            
+                <div class="certificates">
+                    <h3 class="shop-title">NAŠI CERTIFIKATI</h3>
+                    <ul class="certificate-list">
+                        <li class="certificate-item">
+                            <img src="placeholder_euro_cert.png" alt="Euro Cert" class="certificate-logo">
+                            <div class="certificate-info">
+                                <h4>EURO CERT</h4>
+                                <p>EU ekološki certifikat</p>
+                            </div>
+                        </li>
+                        <li class="certificate-item">
+                            <img src="placeholder_uradni_znak_eu.png" alt="Uradni znak EU" class="certificate-logo">
+                            <div class="certificate-info">
+                                <h4>Uradni znak EU za ekološka živila</h4>
+                                <p>Kontrolira SI-EKO-002 Kmetijstvo EU</p>
+                            </div>
+                        </li>
+                        <li class="certificate-item">
+                            <img src="placeholder_ekolosko_kmetijstvo.png" alt="Ekološko kmetijstvo Slovenije" class="certificate-logo">
+                            <div class="certificate-info">
+                                <h4>Ekološko kmetijstvo Slovenije</h4>
+                                <p>BIO certifikat (Inštitut KON-CERT Maribor)</p>
+                            </div>
+                        </li>
+                        <li class="certificate-item">
+                            <img src="placeholder_bio_slovenija.png" alt="BIO Slovenija" class="certificate-logo">
+                            <div class="certificate-info">
+                                <h4>BIO Slovenija</h4>
+                                <p>Ekološki certifikat Slovenije</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
             </main>
 
         <!-- Noga -->
