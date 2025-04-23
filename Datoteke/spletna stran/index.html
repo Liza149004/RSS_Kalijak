@@ -7,9 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
       body {
-        background-color: #ffffff;
         padding-top: 70px;
-        font-family: 'Arial', sans-serif;
+        font-family: 'Antonio', sans-serif;
       }
       .hero-logo {
         background-color: #72AC45;
@@ -29,7 +28,7 @@
       .slogan {
         text-align: center;
         font-weight: bold;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         color: #52463D;
       }
       .section-title {
@@ -57,39 +56,14 @@
         padding: 20px;
         color: white;
       }
-      body {
-        background-color: #FFFFFF;
-        padding-top: 70px;
-        font-family: 'Antonio', sans-serif;
-      }
-      .circle-img {
-        width: 100%; /*če damo tu več da gre kou preko roba se zgoci da izgineta search in košarica gmb v navbar*/
-        height: 100%;
-        object-fit: cover;
-        overflow: hidden;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-      }
-      .bottom-arch {
-        width: 100%;
-        aspect-ratio: 1 / 1;
-        border-bottom-left-radius: 100% 50%;
-        border-bottom-right-radius: 100% 50%;
-        overflow: hidden;
-      }
-      .arch-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
       .content-box {
         background-color: #72AC45;
         color: white;
         padding: 1rem;
-        height: 100%;
         flex-direction: column;
         justify-content: center;
         border-radius: 1rem;
+        font-size: small;
       }
       .footer.bg-image {
         background-image: url('fotografije/logotip/trava.png');
@@ -103,10 +77,15 @@
       .navbar {
         background-color: #72AC45;
       }
+      .ozadje {
+        background-image: url('fotografije/Domača stran/Posnetek zaslona 2025-04-22 221429.png');
+        background-position: center;
+       background-repeat: repeat;
+      }
     </style>
   </head>
 
-    <body>
+    <body class="ozadje">
 
       <!--Iskanje - Search bar-->
       <div class="conteiner modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
@@ -193,15 +172,7 @@
               </div>
             </div>
         
-            <!-- Slika zgoraj desno -->
-            <div class="col-6">
-              <img src="fotografije/Domača stran/zelenjava.jpg" alt="Zelenjava" class="circle-img shadow" />
-            </div>
-        
-            <!-- Slika spodaj levo -->
-            <div class="col-6">
-              <img src="fotografije/Domača stran/zelenjava.jpg" alt="Sadike" class="circle-img shadow" />
-            </div>
+          
         
             <!-- Text spodaj desno -->
             <div class="col-6">

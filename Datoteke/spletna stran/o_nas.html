@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Naša ponudba - sadike</title>
+        <title>O nas</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -60,26 +60,13 @@
             .navbar {
                 background-color: #72AC45;
             }
-            .ozadje {
-                background-image: url('fotografije/Ponudba/ozadje trgovina-01.png');
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-            }
             main {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
+                text-align: center;  
             }
-
             .container main{
                 max-width: 600px;
                 margin: 20px auto;
                 padding: 20px;
-                background-color: #fff;
-                border-radius: 10px;
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             }
 
             h2 {
@@ -89,17 +76,17 @@
 
             .map-container {
                 width: 100%;
-                border: 4px solid #aed581; /* Zelen okvir */
+                border: 4px solid #aed581; 
                 border-radius: 8px;
                 overflow: hidden;
-                margin-bottom: 10px; /* Zmanjšan spodnji rob za prostor do naslova */
-                height: 200px; /* Omejena višina na približno tretjino prejšnje (lahko prilagodite) */
+                margin-bottom: 10px; 
+                height: 200px; 
             }
 
             iframe {
                 display: block;
                 width: 100%;
-                height: 100%; /* Zemljevid zavzame celotno višino starša */
+                height: 100%; 
                 border: 0;
             }
 
@@ -107,9 +94,9 @@
                 background-color: #d7f1db;
                 color:#72AC45;
                 padding: 10px;
-                border-radius: 15px; /* Večji radij robov */
-                margin-top: 5px; /* Zmanjšan zgornji rob za prostor od zemljevida */
-                margin-bottom: 20px; /* Dodan spodnji rob za prostor do "O nas" */
+                border-radius: 15px; 
+                margin-top: 5px; 
+                margin-bottom: 20px; 
             }
 
             .about-us {
@@ -129,8 +116,6 @@
                 margin-top: 0;
                 margin-bottom: 15px;
             }
-
-
 
             .certificates {
                 margin-top: 30px;
@@ -152,7 +137,7 @@
 
             .certificate-item {
                 display: flex;
-                align-items: center; /* Navpična poravnava slike in besedila */
+                align-items: center;
                 margin-bottom: 15px;
                 padding-bottom: 15px;
                 border-bottom: 1px solid #eee;
@@ -165,8 +150,8 @@
             }
 
             .certificate-logo {
-                width: 60px; /* Zmanjšana širina slike */
-                height: 60px; /* Zmanjšana višina slike */
+                width: 60px; 
+                height: 60px; 
                 margin-right: 15px;
                 border: 1px solid #ddd;
                 border-radius: 5px;
@@ -209,7 +194,7 @@
         </style>
     </head>
 
-        <body class="ozadje">
+        <body>
 
             <!--Iskanje - Search bar-->
             <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
@@ -270,16 +255,16 @@
 
             <!-- Glava strani -->
                 <header class="container">
-                    <!--<div style="text-align: center;">
-                        <img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" alt="Kalijak logotip" width="150px">
-                    </div>-->
-                    </br></br></br></br></br></br>
+                    <div style="text-align: center;">
+                        <a href="index.html"><img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" alt="Kalijak logotip" width="150px"></a>
+                    </div>
                 </header>
 
              <!-- Telo - vsebina -->
             <main class="container my-3">
                 <div class="container">
                     <h2 class="shop-title">KJE NAS NAJDETE</h2>
+                    <hr>
                     <div class="map-container">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2768.842988819879!2d15.0042946!3d45.9159134!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4764db0c76a808a3%3A0x36a5a934b61c43c9!2sPekel%203%2C%203210%20Trebnje!5e0!3m2!1ssl!2ssi!4v1682278347983!5m2!1ssl!2ssi"
                                 width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -288,37 +273,42 @@
             
                     <div class="about-us">
                         <h3>O NAS</h3>
+                        <hr>
                         <p>Smo ena redkih slovenskih ekoloških kmetij, ki se ukvarja z gojenjem lastnih sadik zelenjave, sadja in zelišč, ter lastno pridelavo zelenjave.</p>
                     </div>
                 </div>
-            
-            
+            </br>
+                <h3 class="shop-title">KONTAKT</h3>
+                <hr>
+                <p>E-pošta: kalijak.eko@gmail.com</br>
+                    tel. +386 70 700 007</p>
                 <div class="certificates">
                     <h3 class="shop-title">NAŠI CERTIFIKATI</h3>
+                    <hr>
                     <ul class="certificate-list">
                         <li class="certificate-item">
-                            <img src="placeholder_euro_cert.png" alt="Euro Cert" class="certificate-logo">
+                            <img src="fotografije/O nas/EU_ekološki_certifikat.png" alt="Euro Cert" class="certificate-logo">
                             <div class="certificate-info">
                                 <h4>EURO CERT</h4>
                                 <p>EU ekološki certifikat</p>
                             </div>
                         </li>
                         <li class="certificate-item">
-                            <img src="placeholder_uradni_znak_eu.png" alt="Uradni znak EU" class="certificate-logo">
+                            <img src="fotografije/O nas/EU_ekološka_živila.jpg" alt="Uradni znak EU" class="certificate-logo">
                             <div class="certificate-info">
                                 <h4>Uradni znak EU za ekološka živila</h4>
                                 <p>Kontrolira SI-EKO-002 Kmetijstvo EU</p>
                             </div>
                         </li>
                         <li class="certificate-item">
-                            <img src="placeholder_ekolosko_kmetijstvo.png" alt="Ekološko kmetijstvo Slovenije" class="certificate-logo">
+                            <img src="fotografije/O nas/Ekološko kmetijstvo Slovenije.jpg" alt="Ekološko kmetijstvo Slovenije" class="certificate-logo">
                             <div class="certificate-info">
                                 <h4>Ekološko kmetijstvo Slovenije</h4>
                                 <p>BIO certifikat (Inštitut KON-CERT Maribor)</p>
                             </div>
                         </li>
                         <li class="certificate-item">
-                            <img src="placeholder_bio_slovenija.png" alt="BIO Slovenija" class="certificate-logo">
+                            <img src="fotografije/O nas/BIO Slovenija.png" alt="BIO Slovenija" class="certificate-logo">
                             <div class="certificate-info">
                                 <h4>BIO Slovenija</h4>
                                 <p>Ekološki certifikat Slovenije</p>
