@@ -1,0 +1,478 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Naša ponudba - zelenjava</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            body {
+                background-color: #FFFFFF;
+                font-family: 'Antonio', sans-serif;
+            }
+            .ponudba-title {
+                font-size: 1.8em;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #393325;
+            }
+            .toggle-container {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                margin-left: 79px;
+                margin-right: 79px;
+                background-color: #72AC45; 
+                padding: 3px; 
+                border-radius: 25px; 
+            }
+            .toggle-button {
+                border: none;
+                padding: 8px 16px;
+                cursor: pointer;
+                font-weight: bold;
+                color: #d9f1c8; 
+                background-color: transparent;
+                border-radius: 25px;
+                font-size: 15px;
+            }
+            .toggle-button.active {
+                background-color: #d9f1c8; 
+                color: #72AC45;
+            }
+            .grid-container {
+                padding: 0 10px;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+                margin-left: -5px;
+                margin-right: -5px;
+            }
+            .col-md-6 {
+                width: 50%;
+                padding: 0 5px;
+                margin-bottom: 15px;
+            }
+            .item-container {
+                background-color: white;   
+                border-radius: 8px; 
+                padding: 10px; 
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                height: 100%; 
+            }
+            .image-container {
+                background-color: #f5f5dc; 
+                height: 120px;
+                margin-bottom: 8px; 
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.75em;
+                border: 3px solid #72AC45; 
+                overflow: hidden; 
+            }
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .item-title {
+                font-weight: bold;
+                margin-bottom: 3px;
+                font-size: 1em;
+                color: #393325;
+            }
+            .item-description {
+                color: #393325;
+                font-size: 0.85em;
+                margin-bottom: 8px;
+                flex-grow: 1;
+            }
+            .button-icon-row {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-top: auto;
+            }
+            .view-button {
+                display: inline-block;
+                padding: 6px 12px;
+                background-color: #72AC45;
+                color: white;
+                text-decoration: none;
+                border-radius: 5px;
+                font-size: 0.8em;
+            }
+            .modal-header{
+                background-color: #72AC45;
+            }
+            .footer.bg-image {
+                background-image: url('fotografije/logotip/trava.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .container-footer {
+                margin-top: 70px;
+            }
+            .navbar {
+                background-color: #72AC45;
+            }
+            .ozadje {
+                background-image: url('fotografije/Ponudba/ozadje trgovina-01-01.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        </style>
+    </head>
+
+        <body>
+
+        <?php include 'puščica.php'; ?>
+
+        <?php include 'orodna_vrstica_zgoraj.php'; ?>
+
+            <!-- Glava strani -->
+            <?php include 'header_svetlo.php'; ?>
+
+            <!-- Telo - vsebina-->
+                <main class="container my-3">
+                    <h2 class="ponudba-title text-center">NAŠA PONUDBA</h2>
+                    <div class="toggle-container">
+                        <button class="toggle-button" onclick="window.location.href='sadike.php'">Sadike</button>
+                        <button class="toggle-button active" onclick="window.location.href='zelenjava.php'">Zelenjava</button>
+                    </div>
+            
+                    <div class="grid-container">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Zelenjava/cesnjev.jpg" alt="Češnjev paradižnik">
+                                    </div>
+                                    <h3 class="item-title">Češnjev paradižnik</h3>
+                                    <p class="item-description">Okusni majhni paradižniki, idealni za prigrizek ali solato.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Zelenjava/volovsko.jpg" alt="Volovsko srce">
+                                    </div>
+                                    <h3 class="item-title">Volovsko srce</h3>
+                                    <p class="item-description">Veliki, mesnati paradižniki z bogatim okusom.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Zelenjava/Yellow-tomatoes-.png" alt="Rumen paradižnik">
+                                    </div>
+                                    <h3 class="item-title">Rumen paradižnik</h3>
+                                    <p class="item-description">Sladki in sočni rumeni paradižniki, odličen dodatek k jedem.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Zelenjava/sweetpeper.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Sladka paprika</h3>
+                                    <p class="item-description">Različne barve sladkih paprik, idealne za kuhanje in sveže uživanje.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/pekoča paprika.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Pekoča paprika</h3>
+                                    <p class="item-description">Različne stopnje pikantnosti, primerna za omake in sušenje</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/paprika babura.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Paprika babura</h3>
+                                    <p class="item-description">Sočna, hrustljava, dobro prenaša pečenje in polnjenje.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/kumare.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Solatne kumare</h3>
+                                    <p class="item-description">Sočne, hrustljave, primerne za svežo uporabo.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/kumarice.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Kumare za vlaganje</h3>
+                                    <p class="item-description">Manjše, čvrste, primerne za vlaganje.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/rumene bucke.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Rumene bučke</h3>
+                                    <p class="item-description">Nežno sladkaste, mehkejše teksture.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/maslenka.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Buča maslenka</h3>
+                                    <p class="item-description">Sladkega okusa, mehka tekstura, primerna za juhe.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/hokaido.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Buča hokaido</h3>
+                                    <p class="item-description">Močan oreškast okus, ne potrebuje lupljenja.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/krhka solata.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Krhkolistna solata</h3>
+                                    <p class="item-description">Hrustljava, sveža, odporna na vročino.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/rdeča solata.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Rdeča solata</h3>
+                                    <p class="item-description">Rahlo oreškast okus, bogata z antioksidanti.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/ledenka.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Kristalka</h3>
+                                    <p class="item-description">Kompaktna glava, hrustljavi listi, sladkega okusa.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/blitva.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Blitva</h3>
+                                    <p class="item-description">Nežno sladkast okus, dobro prenaša kuhanje.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/spinača.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Špinača</h3>
+                                    <p class="item-description">Bogata z vitamini, nežnega okusa.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/rukula.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Rukula</h3>
+                                    <p class="item-description">Rahlo pikantna, oreškaste arome.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/radič.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Radič</h3>
+                                    <p class="item-description">Rahlo grenak, odličen v solatah.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/koleraba.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Koleraba</h3>
+                                    <p class="item-description">Hrustljava, rahlo sladka, primerna surova ali kuhana.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/brokoli.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Brokoli</h3>
+                                    <p class="item-description">Blagega okusa, bogat z vitamini.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/cvetača.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Cvetača</h3>
+                                    <p class="item-description">Nežen okus, primerna za cvrtje in pireje.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/zelje.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Zelje</h3>
+                                    <p class="item-description">Sočno, sladkasto, primerno za solate in kuhanje.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/ohrovt.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Ohrovt</h3>
+                                    <p class="item-description">Čvrsti listi, odporen na mraz.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/grah.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Grah</h3>
+                                    <p class="item-description">Sladkast, hrustljav, primeren za svežo ali kuhano uporabo.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/nizek fizol.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Nizek fizol</h3>
+                                    <p class="item-description">Kompaktna rast, hitro rodi.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="item-container">
+                                    <div class="image-container">
+                                        <img src="fotografije/Ponudba/Sadike/strocji fizol rastlina.jpg" alt="Sladka paprika">
+                                    </div>
+                                    <h3 class="item-title">Stročji fizol</h3>
+                                    <p class="item-description">Mehki stroki, primerni za solate in priloge.</p>
+                                    <div class="button-icon-row">
+                                        <a href="trgovina_zelenjava.php" class="view-button">Poglej v trgovini</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+        <!-- Noga -->    
+        <?php include 'footer.php'; ?>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

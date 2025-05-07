@@ -9,19 +9,7 @@
         <style>
             body {
                 background-color: #FFFFFF;
-                padding-top: 70px;
                 font-family: 'Antonio', sans-serif;
-            }
-            .header {
-                background-color: #FFFFFF;
-                color: white;
-                padding: 15px 20px;
-                text-align: center;
-                margin-bottom: 15px;
-            }
-            .header h1 {
-                font-size: 2.2em;
-                margin-bottom: 0;
             }
             .ponudba-title {
                 font-size: 1.8em;
@@ -146,90 +134,31 @@
                 background-repeat: no-repeat;
             }
             .vrh_strani {
-    display: none;
-
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    z-index: 1000;
-    cursor: pointer;
-}
+                display: none;
+                text-align: center;
+                width: 20px;
+                height: 20px;
+                z-index: 1000;
+                cursor: pointer;
+            }
         </style>
     </head>
 
-        <body class="ozadje">
+        <body>
+          
+        <?php include 'puščica.php'; ?>
 
-            <!--Iskanje - Search bar-->
-            <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header bg-dark text-white">
-                            <h5 class="modal-title" id="searchModalLabel">Iskanje</h5>
-                            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Zapri"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form id="searchForm">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Išči..." id="searchInput">
-                                    <button class="btn btn-dark" type="submit">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!--Navigacija-->
-            <nav class="navbar navbar-dark fixed-top" role="navigation">
-                <div class="container-fluid d-flex justify-content-between">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#menu" aria-controls="menu">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div>
-                    <button class="btn btn-link me-3 p-0" data-bs-toggle="modal" data-bs-target="#searchModal">
-                        <img src="fotografije/logotip/search belo.png" width="25px" alt="Iskanje">
-                    </button>
-                    <a href="kosarica.html"><img src="fotografije/logotip/basket belo.png" width="25px" alt="Košarica"></a>
-                    </div>
-                </div>
-            </nav>
-
-                <aside class="offcanvas offcanvas-start" tabindex="-1" id="menu" aria-labelledby="menuLabel">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title" id="menuLabel"><img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" padding-top="10px" width="50px"></h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Zapri"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <nav>
-                        <ul class="navbar-nav">
-                            <li><a class="nav-link" href="index.html">Domov</a></li>
-                            <li><a class="nav-link" href="o_nas.html">O nas</a></li>
-                            <li><a class="nav-link" href="setveni_koledar.html">Setveni koledar</a></li>
-                            <li><a class="nav-link" href="zgodovina.html">Zgodovina</a></li>
-                            <li><a class="nav-link" href="sadike.html">Sadike</a></li>
-                            <li><a class="nav-link" href="zelenjava.html">Zelenjava</a></li>
-                            <li><a class="nav-link" href="trgovina_sadike.html">Trgovina</a></li>
-                        </ul>
-                        </nav>
-                    </div>
-                </aside>
+        <?php include 'orodna_vrstica_zgoraj.php'; ?>
 
             <!-- Glava strani -->
-                <header class="container">
-                    <!--<div style="text-align: center;">
-                        <img src="fotografije/logotip/logoKalijak_končno_brez obrobe.png" alt="Kalijak logotip" width="150px">
-                    </div>-->
-                </br></br></br></br></br>
-                </header>
+            <?php include 'header_svetlo.php'; ?>
 
              <!-- Telo - vsebina -->
             <main class="container my-3">
                 <h2 class="ponudba-title text-center">NAŠA PONUDBA</h2>
                 <div class="toggle-container">
-                    <button class="toggle-button active" onclick="window.location.href='sadike.html'">Sadike</button>
-                    <button class="toggle-button" onclick="window.location.href='zelenjava.html'">Zelenjava</button>
+                    <button class="toggle-button active" onclick="window.location.href='sadike.php'">Sadike</button>
+                    <button class="toggle-button" onclick="window.location.href='zelenjava.php'">Zelenjava</button>
                 </div>
 
                 <div class="container">
@@ -241,8 +170,8 @@
                                 </div>
                                 <h3 class="item-title">Češnjev paradižnik</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -253,8 +182,8 @@
                                 </div>
                                 <h3 class="item-title">Volovsko srce</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -267,8 +196,8 @@
                                 </div>
                                 <h3 class="item-title">Rumen paradižnik</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -279,8 +208,8 @@
                                 </div>
                                 <h3 class="item-title">Sladka paprika</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -291,8 +220,8 @@
                                 </div>
                                 <h3 class="item-title">Pekoča paprika</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -303,8 +232,8 @@
                                 </div>
                                 <h3 class="item-title">Paprika babura</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -315,8 +244,8 @@
                                 </div>
                                 <h3 class="item-title">Solatne kumare</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -327,8 +256,8 @@
                                 </div>
                                 <h3 class="item-title">Kumare za vlaganje</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -339,8 +268,8 @@
                                 </div>
                                 <h3 class="item-title">Rumene bučke</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -351,8 +280,8 @@
                                 </div>
                                 <h3 class="item-title">Buča maslenka</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -363,8 +292,8 @@
                                 </div>
                                 <h3 class="item-title">Buča hokaido</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -375,8 +304,8 @@
                                 </div>
                                 <h3 class="item-title">Krhkolistna solata</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -387,8 +316,8 @@
                                 </div>
                                 <h3 class="item-title">Rdeča solata</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -399,8 +328,8 @@
                                 </div>
                                 <h3 class="item-title">Kristalka</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -411,8 +340,8 @@
                                 </div>
                                 <h3 class="item-title">Blitva</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -423,8 +352,8 @@
                                 </div>
                                 <h3 class="item-title">Špinača</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -435,8 +364,8 @@
                                 </div>
                                 <h3 class="item-title">Rukula</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -447,8 +376,8 @@
                                 </div>
                                 <h3 class="item-title">Radič</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -459,8 +388,8 @@
                                 </div>
                                 <h3 class="item-title">Koleraba</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -471,8 +400,8 @@
                                 </div>
                                 <h3 class="item-title">Brokoli</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -483,8 +412,8 @@
                                 </div>
                                 <h3 class="item-title">Cvetača</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -495,8 +424,8 @@
                                 </div>
                                 <h3 class="item-title">Zelje</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -507,8 +436,8 @@
                                 </div>
                                 <h3 class="item-title">Ohrovt</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -519,8 +448,8 @@
                                 </div>
                                 <h3 class="item-title">Grah</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -531,8 +460,8 @@
                                 </div>
                                 <h3 class="item-title">Nizek fizol</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -543,8 +472,8 @@
                                 </div>
                                 <h3 class="item-title">Stročji fizol</h3>
                                 <div class="button-icon-row">
-                                    <a href="trgovina_sadike.html" class="view-button">Poglej v trgovini</a>
-                                    <a href="setveni_koledar.html" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
+                                    <a href="trgovina_sadike.php" class="view-button">Poglej v trgovini</a>
+                                    <a href="setveni_koledar.php" class="calendar-icon"><i class="fa-regular fa-calendar"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -554,32 +483,7 @@
         </main>
 
     <!-- Noga -->
-        <footer  class="footer bg-image text-white text-center py-3 bottom">
-            <div class="container-footer">
-                <i class="bi bi-info-circle-fill info-icon" role="link" aria-label="Informacije"><link href="o_nas.html"></i>
-                <p>© 2025 Kalijak. Vse pravice pridržane.</p>
-            </div>
-        </footer>
-
-        <button id="vrh_strani" class="vrh_strani"><img src="fotografije/logotip/puščica.png"></button>
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var gumb = document.getElementById("vrh_strani");
-
-                window.addEventListener('scroll', function () {
-                    if (window.scrollY > 300) {
-                        gumb.style.display = 'block';
-                    } else {
-                        gumb.style.display = 'none';
-                    }
-                    });
-    
-                gumb.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
-                });
-            });
-        </script>
+    <?php include 'footer.php'; ?>
       
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
     </body>

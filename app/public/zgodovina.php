@@ -1,0 +1,339 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Zgodovina</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <style>
+            body {
+                background-color: #FFFFFF;
+                padding-top: 70px;
+                font-family: 'Antonio', sans-serif;
+            }
+            .header {
+                background-color: #FFFFFF;
+                color: white;
+                padding: 15px 20px;
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .header h1 {
+                font-size: 2.2em;
+                margin-bottom: 0;
+            }
+            .ponudba-title {
+                font-size: 1.8em;
+                font-weight: bold;
+                margin-bottom: 10px;
+                color: #393325;
+            }
+            .shop-title {
+                font-size: 1.8em;
+                font-weight: bold;
+                margin: 10px;
+                color: #393325;
+                text-align: center;
+            }
+            .form {
+                background-color: rgb(187, 187, 187);
+                padding: 5px;
+                border-radius: 4%;
+            }
+            .kosarica-button{
+                background-color: #72AC45;
+            }
+            .link{
+                color: #FFFFFF;
+                text-decoration: none;
+            }
+            .footer.bg-image {
+                background-image: url('fotografije/logotip/trava.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .container-footer {
+                margin-top: 70px;
+            }
+            .navbar {
+                background-color: #393325;
+            }
+            .ozadje{
+                background-image: url('fotografije/Zgodovina/Untitled-1.png');
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            .row-thirds {
+                display: flex;
+                flex-wrap: wrap; 
+                margin-bottom: 15px;
+            }
+            .third {
+                width: 100%; 
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center; 
+                box-sizing: border-box; 
+            }
+            .button-container {
+                width: auto; 
+                margin-bottom: 10px;
+                align-self: flex-start; 
+            }
+            .history-button {
+                padding: 10px 15px;
+                background-color: #393325; 
+                border: none;
+                border-radius: 8px;
+                text-align: center;
+                font-size: 1.2em;
+                cursor: pointer;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+            .explanation-box {
+                background-color: rgb(240, 238, 238);
+                color: #393325;
+                padding: 15px;
+                border-radius: 8px;
+                margin-top: 10px;
+                border: 2px solid #393325;
+                display: none;
+                width: 100%;
+                box-sizing: border-box; 
+            }
+            .image-container {
+                width: 95%;
+                height: 90%;
+                overflow: hidden;
+                border-radius: 8px;
+                border: 3px solid #393325;
+                margin-top: 10px;
+                align-self: center;
+            }
+            .image-container img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        </style>
+    </head>
+
+        <body class="ozadje">
+
+        <?php include 'puščica.php'; ?>
+
+        <?php include 'orodna_vrstica_zgoraj.php'; ?>
+
+            <!-- Glava strani -->
+                <header class="container">
+                    <div style="text-align: center;">
+                        <a href="index.php"><img src="fotografije/logotip/logoKalijak_končno_rjavo_brez obrobe.png" alt="Kalijak logotip" width="150px"></a>
+                    </div>
+                    <hr>
+                </header>
+
+             <!-- Telo - vsebina -->
+            <main class="container my-3">
+                <div class="container">
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('1932')">1932</button>
+                            </div>
+                            <div id="explanation-1932" class="explanation-box">
+                                <strong>1932</strong> - Stara mama Jožefa in njen mož Anton postavita temelje kmetije v Peklu pri Trebnjem. Kmetija je bila majhna, usmerjena v samooskrbo.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164428.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('1965')">1965</button>
+                            </div>
+                            <div id="explanation-1965" class="explanation-box">
+                                <strong>1965</strong> - Kmetijo prevzame njuna hči Marija, ki razširi pridelavo zelenjave in začne prodajo na bližnjih tržnicah.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164634.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('1995')">1995</button>
+                            </div>
+                            <div id="explanation-1995" class="explanation-box">
+                                <strong>1995</strong> - Marijina hči Nataša Butolen se po šolanju vrne na kmetijo in začne uvajati prve sodobne spremembe.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164625.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2005')">2005</button>
+                            </div>
+                            <div id="explanation-2005" class="explanation-box">
+                                <strong>2005</strong> - Kmetija popolnoma preide v roke Nataše, ki se odloči za prehod na ekološko kmetovanje.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164521.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2010')">2010</button>
+                            </div>
+                            <div id="explanation-2010" class="explanation-box">
+                                <strong>2010</strong> -Postavljeni so prvi rastlinjaki, ki izkoriščajo termalno vodo za ogrevanje.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164552.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2015')">2015</button>
+                            </div>
+                            <div id="explanation-2015" class="explanation-box">
+                                <strong>2015</strong> - Uvedba pametnega kompostnega sistema in prehod na popolnoma trajnostno pridelavo brez umetnih gnojil.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164503.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2018')">2018</button>
+                            </div>
+                            <div id="explanation-2018" class="explanation-box">
+                                <strong>2018</strong> - Zagon storitve "Zelenjava na dom", ki omogoča dostavo svežih pridelkov v Trebnje, Novo mesto in Ljubljano.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164445.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2022')">2022</button>
+                            </div>
+                            <div id="explanation-2022" class="explanation-box">
+                                <strong>2022</strong> - Kmetija Kalijak postane ena izmed vodilnih ekoloških kmetij v Sloveniji, sodeluje z restavracijami in trgovinami ter organizira izobraževalne delavnice za mlade kmete.
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164605.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2023')">2023</button>
+                            </div>
+                            <div id="explanation-2023" class="explanation-box">
+                                <strong>2023</strong> - Postavitev dodatnih rastlinjakov in razširitev ponudbe na zelišča in jagodičevje.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164552.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2024')">2024</button>
+                            </div>
+                            <div id="explanation-2024" class="explanation-box">
+                                <strong>202</strong> - Kmetija začne uporabljati pametne senzorje in AI analizo za optimizacijo rabe vode, hranil in temperature v rastlinjakih.
+                            </div>
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/images.jpg" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row-thirds">
+                        <div class="third">
+                            <div class="button-container">
+                                <button class="history-button text-white" onclick="toggleExplanation('2025')">2025</button>
+                            </div>
+                            <div id="explanation-2025" class="explanation-box">
+                                <strong>2025</strong> - Uvedba prvega popolnoma samooskrbnega ekološkega e-tržnega sistema, kjer kupci preko spletne platforme vnaprej naročajo sezonske pridelke. Kmetija Kalijak postane model sodobnega ekološkega kmetovanja v Sloveniji.
+                        </div>
+                        <div class="third">
+                            <div class="image-container">
+                                <img src="fotografije/Zgodovina/Posnetek zaslona 2025-03-26 164540.png" alt="Slika iz leta 1932" class="rounded-image">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+                <script>
+                    function toggleExplanation(year) {
+                        var explanation = document.getElementById('explanation-' + year);
+                        if (explanation.style.display === 'none' || explanation.style.display === '') {
+                            explanation.style.display = 'block';
+                        } else {
+                            explanation.style.display = 'none';
+                        }
+                    }
+                </script>
+                <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+                <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+            
+            </main>
+
+        <!-- Noga -->
+        <?php include 'footer.php'; ?>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>
