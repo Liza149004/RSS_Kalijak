@@ -40,7 +40,7 @@ DROP TABLE IF EXISTS nacin_placila;
 CREATE TABLE nacin_placila(
 	ID_nacin_placila INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
     ime_na_kartici VARCHAR(300) NOT NULL,
-    st_kartice INT NOT NULL,
+    st_kartice INT(16) NOT NULL,
     datum_poteka VARCHAR(5) NOT NULL,
     CVV INT(3) NOT NULL
 );
@@ -67,7 +67,7 @@ INSERT INTO posta (kraj, postna_st) VALUES
 ('Koper', 6000),
 ('Ptuj', 2250);
 
-INSERT INTO naslov (ulica, hisna_stevilka, TK_posta) VALUES
+INSERT INTO naslov (ulica, hisna_st, TK_posta) VALUES
 ('Trg mladosti', '12', 5),
 ('Slovenska ulica', '10', 1),
 ('Obala', '7', 4),
@@ -82,7 +82,7 @@ INSERT INTO kupec (ime, priimek, email, telefonska_st, TK_naslov) VALUES
 ('Klavdija', 'Želon', 'klavdek@gmail.com', '078644593',5);
 
 INSERT INTO nacin_placila (ime_na_kartici, st_kartice, datum_poteka, CVV) VALUES 
-('Luka Zupančič', '6623889531674529', '11/29', '763' ),
+('Luka Zupančič', '5613894532267865', '11/29', '763' ),
 ('Ana Novak', '1236786245936723', '09/26', '245' ),
 ('Matej Kovač', '4693568132976433', '02/28', '196' ),
 ('Klavdija Želon', '9736157932648637', '10/26', '496' ),
@@ -94,3 +94,4 @@ INSERT INTO narocilo (st_narocila, datum_oddaje_narocila, TK_kupec, TK_nacin_pla
 ('000003', '01/01/2025 00:01', 3 , 5),
 ('000004', '21/03/2025 02:45', 4 , 1),
 ('000005', '31/05/2025 11:39', 2 , 3);
+

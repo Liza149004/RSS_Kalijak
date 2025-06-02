@@ -74,6 +74,79 @@
         }
         ?>
     </div>
+<?php
+$streznik = "mysql"; // Uporabi ime storitve 'mysql'
+$vrata = 3306;       // Uporabi standardni MySQL port znotraj kontejnerja
+$usn = "admin";
+$geslo = " ";
+$baza = "RSS_Kalijak";
+
+try {
+    $conn = new PDO("mysql:host=$streznik;port=$vrata;dbname=$baza", $usn, $geslo);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Povezava uspešna!";
+} catch(PDOException $e) {
+    echo "Povezava neuspešna: " . $e->getMessage();
+}
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $ime = $_POST['ime'];
+    $priimek = $_POST['priimek'];
+    $naslov = $_POST['naslov'];
+    $postna_stevilka = $_POST['postna_stevilka'];
+    $kraj = $_POST['kraj'];
+    $email = $_POST['email'];
+    $telefon = $_POST['telefonska_stevilka'];
+    $ime_kartice = $_POST['ime_na_kartici'];
+    $stevilka_kartice = $_POST['stevilka_kartice'];
+    $datum_poteka = $_POST['datum_poteka'];
+    $cvv = $_POST['cvv'];
+
+    $sql = "INSERT INTO narocila (ime, priimek, naslov, postna_stevilka, kraj, email, telefon, ime_kartice, stevilka_kartice, datum_poteka, cvv)
+            VALUES (:ime, :priimek, :naslov, :postna_stevilka, :kraj, :email, :telefon, :ime_kartice, :stevilka_kartice, :datum_poteka, :cvv)";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':ime', $ime);
+    $stmt->bindParam(':priimek', $priimek);
+    $stmt->bindParam(':naslov', $naslov);
+    $stmt->bindParam(':postna_stevilka', $postna_stevilka);
+    $stmt->bindParam(':kraj', $kraj);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':telefon', $telefon);
+    $stmt->bindParam(':ime_kartice', $ime_kartice);
+    $stmt->bindParam(':stevilka_kartice', $stevilka_kartice);
+    $stmt->bindParam(':datum_poteka', $datum_poteka);
+    $stmt->bindParam(':cvv', $cvv);
+
+    if ($stmt->execute()) {
+        echo "<p class='alert alert-success'>Podatki so bili uspešno shranjeni v bazo!</p>";
+    } else {
+        echo "<p class='alert alert-danger'>Napaka pri shranjevanju podatkov.</p>";
+        print_r($stmt->errorInfo()); // Za bolj natančno napako pri shranjevanju
+    }
+
+    // Izpis podatkov (kot prej)
+    echo "<h2 class='shop-title'>Povzetek naročila:</h2>";
+    echo "<p><span class='bold'>Ime:</span> " . htmlspecialchars($ime) . "</p>";
+    echo "<p><span class='bold'>Priimek:</span> " . htmlspecialchars($priimek) . "</p>";
+    echo "<p><span class='bold'>Naslov:</span> " . htmlspecialchars($naslov) . "</p>";
+    echo "<p><span class='bold'>Poštna številka:</span> " . htmlspecialchars($postna_stevilka) . "</p>";
+    echo "<p><span class='bold'>Kraj:</span> " . htmlspecialchars($kraj) . "</p>";
+    echo "<p><span class='bold'>Email:</span> " . htmlspecialchars($email) . "</p>";
+    echo "<p><span class='bold'>Telefonska številka:</span> " . htmlspecialchars($telefon) . "</p>";
+    echo "<hr>";
+    echo "<p><span class='bold'>Ime na kartici:</span> " . htmlspecialchars($ime_kartice) . "</p>";
+    echo "<p><span class='bold'>Številka kartice:</span> " . htmlspecialchars($stevilka_kartice) . "</p>";
+    echo "<p><span class='bold'>Datum poteka:</span> " . htmlspecialchars($datum_poteka) . "</p>";
+    echo "<p><span class='bold'>CVV:</span> " . htmlspecialchars($cvv) . "</p>";
+
+} else {
+    echo "<p>Ni podatkov za izpis.</p>";
+}
+
+// $conn = null; // Zapiranje povezave (ni nujno potrebno ob koncu skripte)
+?>
+
 </main>
     <?php include 'footer.php';?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
