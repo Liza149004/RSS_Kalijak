@@ -111,7 +111,7 @@
                 <div id="error-cvv" class="error-message"></div>
             </div>
             <hr>
-            <button type="submit" class="btn text-white kosarica-button">Potrdi in plačaj</button>
+            <button type="submit" class="btn text-white kosarica-button" name="narocilo">Potrdi in plačaj</button>
         </form>
     </div>
 </main>
